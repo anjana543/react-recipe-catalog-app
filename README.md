@@ -12,8 +12,6 @@ An important part of food preparation is recipe selection. Lets create one!
 
 ## COMPONENTS
 
-To speed up the time it takes you to solve these tasks we have provided several components that will help you style and structure the user interface.
-
 These components are based on the styled-system specification and rendered using styled-components.
 
 ### Box
