@@ -39,7 +39,7 @@ const RecipeCard = ({
     boxShadow="lg"
     data-testid="recipe-card">
     <Box borderRadius="2px 2px 0px 0px" paddingBottom="56.25%" overflow="hidden" height="0">
-      <img src={image} alt={name} width="100%" />
+      <img src={process.env.PUBLIC_URL + image} alt={name} width="100%" />
     </Box>
     <Box p="xs" height="120px">
       <Text tabIndex="0" fontWeight="bold" fontFamily="primary" fontSize="md">

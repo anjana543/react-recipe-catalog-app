@@ -11,8 +11,8 @@ const App = () => (
   <ThemeProvider>
     <Header />
     <Body>
-      <Router>
-        <Recipes path="/" />
+      <Router basename="">
+        <Recipes path="/recipe-selection-app/" />
       </Router>
     </Body>
     <Footer />
