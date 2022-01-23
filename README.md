@@ -2,6 +2,10 @@
 
 An important part of food preparation is recipe selection. Lets create one!
 
+## LIVE DEMO
+
+https://anjana543.github.io/recipe-selection-app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
