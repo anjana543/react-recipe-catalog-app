@@ -6,73 +6,117 @@ An important part of food preparation is recipe selection. Lets create one!
 
 https://anjana543.github.io/recipe-selection-app/
 
-# Getting Started with Create React App
+## INSTRUCTIONS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone this repository and install the dependencies using `yarn`
+2. Create a new branch named dev `git checkout -b dev`
+3. Complete the tasks described in this document by applying your solution and committing code.
+4. Once you finish, create a pull request to the master branch of this repository.
+5. After creating your pull request, please send the link via email to the recruiter you're in touch with.
 
-## Available Scripts
+## COMPONENTS
 
-In the project directory, you can run:
+These components are based on the styled-system specification and rendered using styled-components.
 
-### `npm start`
+### Box
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Box component serves as a wrapper component for layout related needs. Use Box to set values such as display, width, height, and more. In practice, this component is used as a wrapper around other components to achieve Box Model related styling.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This component uses the following functions from the styled-system: background, border, color, flexbox, layout, position, shadow, and space.
 
-### `npm test`
+Reference table for styled-system: [https://github.com/styled-system/styled-system/blob/master/docs/table.md](https://github.com/styled-system/styled-system/blob/master/docs/table.md)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We recommend to use long-hand properties, for example:
 
-### `npm build`
+```js
+// Do
+<Box borderTopWidth="sm" borderTopColor="border" borderTopStyle="solid" />
+// Don't
+<Box borderTop="1px solid" borderColor="border" />
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Flex
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Flex component behaves the same as the Box component except that it has display: flex set by default.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### List
 
-### `npm eject`
+The List component renders a ul element with list-style-type: none set by default.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This component uses the following functions from styled-system: layout, space.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Reference table for styled-system: [https://github.com/styled-system/styled-system/blob/master/docs/table.md](https://github.com/styled-system/styled-system/blob/master/docs/table.md)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### ListItem
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The ListItem component renders a li element, and it's recommended to be used as the children of the List component.
 
-## Learn More
+### Text
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The Text component is a wrapper component that will apply typography styles to the text inside. It renders a div element as default, but using the ["as" polyphormic property from the styled-components specification](https://styled-components.com/docs/api#as-polymorphic-prop) can render any text element, such as p, h1, span, etc.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Button
 
-### Code Splitting
+The Button component can use two different variants; primary and secondary, that can be manipulated through the variant property.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This component uses the following functions from styled-system: layout, space.
 
-### Analyzing the Bundle Size
+Reference table for styled-system: [https://github.com/styled-system/styled-system/blob/master/docs/table.md](https://github.com/styled-system/styled-system/blob/master/docs/table.md)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Grid
 
-### Making a Progressive Web App
+Our grid is implemented through the styled-bootstrap-grid [https://github.com/dragma/styled-bootstrap-grid](https://github.com/dragma/styled-bootstrap-grid)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## DATA SCHEMA
 
-### Advanced Configuration
+### FreshToHome Box
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```json
+{
+  // FreshToHome box identifier
+  "id": "5f4e821d531e677602591a9b",
+  // Product name
+  "productName": "Classic Box",
+  // Headline
+  "headline": "WEEK OF OCTOBER 12TH'",
+  // Minimum recipes for this FreshToHome box
+  "min": 3,
+  // Maximum recipes for this FreshToHome box
+  "max": 8,
+  // Base price of every recipe
+  "baseRecipePrice": 1798,
+  // Shipping price of this FreshToHome box
+  "shippingPrice": 1298,
+  // Array of recipes that the customer can select for this FreshToHome box
+  "recipes": [
+    {
+      // Recipe identifier
+      "id": "5f4d4a7e62fb0224951e7ec4",
+      // Name of the recipe
+      "name": "Chicken Sausage & Spinach Ravioli",
+      // Recipe slug
+      "slug": "chicken-sausage-spinach-ravioli",
+      // Recipe headline
+      "headline": "with Tomato & Lemon",
+      // Recipe image
+      "image": "./assets/5f4d4a7e62fb0224951e7ec4-2fe03fc2.jpg",
+      // Indicates the times this recipe was selected, this is used to perform the recipe selection
+      "selected": 1,
+      // Maximum number of times this recipe can be selected
+      "selectionLimit": 1,
+      // Extra charge for this recipe
+      "extraCharge": 0,
+      // Servings
+      "yields": 2
+    }
+  ]
+}
+```
 
-### Deployment
+## GLOSSARY
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**FreshToHome Box:** the weekly physical box that arrives at your door containing the recipes that you have previously selected. Boxes have boundaries around the minimum and maximum recipes that you can receive.
 
-### `npm build` fails to minify
+**Recipe:** a combination of ingredients that are cooked together create a FreshToHome recipe; a box can have multiple recipes and multiple items of the same recipe. This way, our customers can cook more portions of the same recipe in case they're throwing a dinner party!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Recipe Selection:** the action of adding or removing a recipe from your box based on the configuration from your box and recipe, such as box selection boundaries and recipe selection limit.
