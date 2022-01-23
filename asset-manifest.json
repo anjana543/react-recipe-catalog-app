@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/recipe-selection-app/static/js/main.a4c92e92.chunk.js",
-    "main.js.map": "/recipe-selection-app/static/js/main.a4c92e92.chunk.js.map",
+    "main.js": "/recipe-selection-app/static/js/main.6396ca91.chunk.js",
+    "main.js.map": "/recipe-selection-app/static/js/main.6396ca91.chunk.js.map",
     "runtime-main.js": "/recipe-selection-app/static/js/runtime-main.c9291d84.js",
     "runtime-main.js.map": "/recipe-selection-app/static/js/runtime-main.c9291d84.js.map",
     "static/js/2.ae26509e.chunk.js": "/recipe-selection-app/static/js/2.ae26509e.chunk.js",
     "static/js/2.ae26509e.chunk.js.map": "/recipe-selection-app/static/js/2.ae26509e.chunk.js.map",
     "index.html": "/recipe-selection-app/index.html",
-    "precache-manifest.7b4bdc1f0ad747c9da3e22d650cd8ea5.js": "/recipe-selection-app/precache-manifest.7b4bdc1f0ad747c9da3e22d650cd8ea5.js",
+    "precache-manifest.5243e8c6662d19fcd7f7a1cc40fa3fe3.js": "/recipe-selection-app/precache-manifest.5243e8c6662d19fcd7f7a1cc40fa3fe3.js",
     "service-worker.js": "/recipe-selection-app/service-worker.js",
     "static/js/2.ae26509e.chunk.js.LICENSE.txt": "/recipe-selection-app/static/js/2.ae26509e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c9291d84.js",
     "static/js/2.ae26509e.chunk.js",
-    "static/js/main.a4c92e92.chunk.js"
+    "static/js/main.6396ca91.chunk.js"
   ]
 }
